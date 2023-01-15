@@ -18,17 +18,17 @@ evolving field of computing and new programming languages that arise. I also aim
 
 These are the subjects or fields that I am particularly interested in or passionate about.
 
-- Web development
-- Aws cloud
-- Linux server management
-- Salesforce administrator
-- Api development
+- Web development.
+- Aws cloud.
+- Linux server management.
+- Salesforce administrator.
+- Api development.
 
 ## Certifications
 
-- Graph developer associate - Apollo graphql
-- Docker essentials:A developer introduction
-- IBM carbon systems developer essentials - React
-- NPTEL - An introduction to programming through c++
-- NPTEL - Cloud computing
-- University of michigan Coursera - An introduction to data science in python
+- Graph developer associate - Apollo graphql.
+- Docker essentials:A developer introduction.
+- IBM carbon systems developer essentials - React.
+- NPTEL - An introduction to programming through c++.
+- NPTEL - Cloud computing.
+- University of michigan Coursera - An introduction to data science in python.
