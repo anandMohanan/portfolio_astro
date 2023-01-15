@@ -10,9 +10,9 @@ evolving field of computing and new programming languages that arise. I also aim
 
 ## Tech Stack
 
-| 💻 Front-end   | 🛡️ Back-end            | 🗄️ Database       | 🛠️ Programming    | 🛠️ Other tools            |
-| -------------- | ---------------------- | ----------------- | ----------------- | ------------------------- |
-| React, Next js | Node.js, Graphql, Trpc | MongoDB, Postgres | Golang, Rust, C++ | Git, Webpack, Babel, Jest |
+| 💻 Front-end   | 🛡️ Back-end            | 🗄️ Database       | 🛠️ Programming    |
+| -------------- | ---------------------- | ----------------- | ----------------- |
+| React, Next js | Node.js, Graphql, Trpc | MongoDB, Postgres | Golang, Rust, C++ |
 
 ## Areas of interest
 
