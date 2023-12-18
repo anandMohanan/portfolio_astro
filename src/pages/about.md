@@ -3,8 +3,6 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-I am Anand Mohanan currently pursuing my Bachelors degree in electronics and communication engineering at saveetha engineering college.
-
 I strive to stay current and meet the needs of users by keeping up with the constantly
 evolving field of computing and new programming languages that arise. I also aim to assist new developers.
 
@@ -12,7 +10,7 @@ evolving field of computing and new programming languages that arise. I also aim
 
 | 💻 Front-end   | 🛡️ Back-end            | 🗄️ Database       | 🛠️ Programming    |
 | -------------- | ---------------------- | ----------------- | ----------------- |
-| React, Next js | Node.js, Graphql, Trpc | MongoDB, Postgres | Golang, Rust, C++ |
+| React, Askama | Node.js, Graphql, Axum | MongoDB, Postgres | Golang, Rust, C++ |
 
 ## Areas of interest
 

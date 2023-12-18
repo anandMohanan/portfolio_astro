@@ -11,12 +11,7 @@ import type { Frontmatter } from "src/types";
 import Socials from "@components/Socials.astro";
 import { SOCIALS } from "@config";
 
-const posts = await Astro.glob<Frontmatter>("../contents/**/*.md");
 
-const sortedPosts = getSortedPosts(posts);
-const featuredPosts = sortedPosts.filter(
-  ({ frontmatter }) => frontmatter.featured
-);
 
 const socialCount = SOCIALS.filter(social => social.active).length;
 ---
