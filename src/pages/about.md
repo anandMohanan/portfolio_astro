@@ -8,9 +8,19 @@ evolving field of computing and new programming languages that arise. I also aim
 
 ## Tech Stack
 
-| 💻 Front-end   | 🛡️ Back-end            | 🗄️ Database       | 🛠️ Programming    |
-| -------------- | ---------------------- | ----------------- | ----------------- |
-| React, Askama | Node.js, Graphql, Axum | MongoDB, Postgres | Golang, Rust, C++ |
+| 💻 Front-end   | 🛡️ Back-end            | 🗄️ Database       | 
+| -------------- | ---------------------- | ----------------- |
+| React, Nextjs | Node.js, Graphql, Golang | MongoDB, Postgres  |
+
+- Also I play around with Rust, ocaml etc..
+
+## Experience
+
+- Full Stack Developer @ VoiceFirstAI (current)
+- Software Engineer @ Avasoft ( 1 year 2 months )
+- Salesforce Admin Intern @ Smartbridge ( 1 month )
+
+
 
 ## Areas of interest
 
@@ -24,9 +34,12 @@ These are the subjects or fields that I am particularly interested in or passion
 
 ## Certifications
 
+- Academy Accreditation - Generative AI Fundamentals (DataBricks) 
+- Graph developer professional - Apollo graphql.
 - Graph developer associate - Apollo graphql.
 - Docker essentials:A developer introduction.
 - IBM carbon systems developer essentials - React.
 - NPTEL - An introduction to programming through c++.
 - NPTEL - Cloud computing.
 - University of michigan Coursera - An introduction to data science in python.
+

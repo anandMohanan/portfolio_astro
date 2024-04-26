@@ -7,7 +7,7 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://anandmohanan.social",
+  site: "https://anand-mohanan.vercel.app",
   integrations: [
     tailwind({
       config: {
