@@ -9,10 +9,8 @@ title: "Tools"
 ## Code Editor
 - Neovim and some plugins.
 
-
 ## Analytics
 - posthog.
-
 
 ## File Uploading
 - Uploadthing.
@@ -20,3 +18,11 @@ title: "Tools"
 ## Deployment
 - Vercel
 - Cloudflare
+
+## Database
+- Neon (Postgres)
+- Xata (Postgres)
+- Turso (sqlite)
+
+## Domains
+- Hostinger

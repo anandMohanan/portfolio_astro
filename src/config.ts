@@ -1,11 +1,11 @@
 import type { SocialObjects } from "./types";
 
 export const SITE = {
-    website: "https://anand-mohanan.vercel.app/",
+    website: "https://anandmohanan.site/",
     author: "Anand Mohanan",
     desc: "Anand mohanan portfolio",
     title: "Anand Mohanan",
-    ogImage: "astropaper-og.jpg",
+    ogImage: "https://utfs.io/f/933b1af5-8a2d-427e-95cf-57732358c527-1nq2cb.svg",
     lightAndDarkMode: true,
     postPerPage: 3,
 };

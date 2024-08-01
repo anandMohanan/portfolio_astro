@@ -7,30 +7,30 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://anand-mohanan.vercel.app",
-  integrations: [
-    tailwind({
-      config: {
-        applyBaseStyles: false,
-      },
-    }),
-    react(),
-    sitemap(),
-  ],
-  markdown: {
-    remarkPlugins: [
-      remarkToc,
-      [
-        remarkCollapse,
-        {
-          test: "Table of contents",
-        },
-      ],
+    site: "https://anandmohanan.site",
+    integrations: [
+        tailwind({
+            config: {
+                applyBaseStyles: false,
+            },
+        }),
+        react(),
+        sitemap(),
     ],
-    shikiConfig: {
-      // theme: "one-dark-pro",
-      wrap: true,
+    markdown: {
+        remarkPlugins: [
+            remarkToc,
+            [
+                remarkCollapse,
+                {
+                    test: "Table of contents",
+                },
+            ],
+        ],
+        shikiConfig: {
+            // theme: "one-dark-pro",
+            wrap: true,
+        },
+        extendDefaultPlugins: true,
     },
-    extendDefaultPlugins: true,
-  },
 });
