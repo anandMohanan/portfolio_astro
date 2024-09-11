@@ -67,6 +67,7 @@ These are the subjects or fields that I am particularly interested in or passion
 
 ## Certifications
 
+- Certified Scrum Master - (Scrum Alliance)
 - Academy Accreditation - Generative AI Fundamentals (DataBricks) 
 - Graph developer professional - Apollo graphql.
 - Graph developer associate - Apollo graphql.
