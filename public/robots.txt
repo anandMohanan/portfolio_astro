@@ -3,3 +3,4 @@ Disallow: /nogooglebot/
 
 User-agent: *
 Allow: /
+Sitemap: https://anandmohanan.com/sitemap-index.xml

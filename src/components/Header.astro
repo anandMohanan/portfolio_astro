@@ -16,6 +16,7 @@ const { activeNav } = Astro.props;
     <div class="top-nav-wrap">
       <a href="/" class="logo">
         {SITE.title}
+        <span class="logo-subtitle">Full‑Stack Engineer & AI Specialist</span>
       </a>
       <nav id="nav-menu">
         <button
@@ -32,12 +33,7 @@ const { activeNav } = Astro.props;
         </button>
         <ul id="menu-items" class="display-none sm:flex">
           <li>
-            <a href="/about" class={activeNav === "about" ? "active" : ""}>
-              About
-            </a>
-          </li>
-          <li>
-            <a href="/tools" class={activeNav === "about" ? "active" : ""}>
+            <a href="/tools">
             Tools
             </a>
           </li>
@@ -74,13 +70,16 @@ const { activeNav } = Astro.props;
     @apply bg-skin-accent text-skin-inverted py-2 px-3 absolute -top-full focus:top-4 left-16 z-50 transition-all;
   }
   .nav-container {
-    @apply max-w-3xl mx-auto flex flex-col sm:flex-row justify-between items-center;
+    @apply max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center;
   }
   .top-nav-wrap {
     @apply relative w-full p-4 sm:py-8 flex justify-between items-start sm:items-center;
   }
   .logo {
     @apply absolute sm:static font-semibold text-xl sm:text-2xl py-1;
+  }
+  .logo-subtitle {
+    @apply block text-xs sm:text-sm font-normal opacity-70;
   }
   .hamburger-menu {
     @apply self-end p-2 sm:hidden;

@@ -2,81 +2,136 @@
 import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
-import LinkButton from "@components/LinkButton.astro";
-import Hr from "@components/Hr.astro";
-
-import getSortedPosts from "@utils/getSortedPosts";
-import slugify from "@utils/slugify";
-import type { Frontmatter } from "src/types";
 import Socials from "@components/Socials.astro";
-import { SOCIALS } from "@config";
 
-
-
-const socialCount = SOCIALS.filter(social => social.active).length;
 ---
 
 <Layout>
   <Header />
   <main id="main-content">
-    <section id="hero">
-      <h1>Anand Mohanan</h1>
+    <section id="experience" class="section">
+      <div class="container">
+        <div class="experience">
+          <article class="role">
+            <h3 class="role-title">Lead Developer — Vautomate AI</h3>
+            <div class="meta">Switzerland (Remote) · Mar 2024 - currently</div>
+            <p class="blurb">
+              Leading development of a customer portal from the ground up in Next.js, building production AI agents with LangChain/LangGraph, and maintaining a Dockerized stack across JavaScript frontends and Python services. I manage CI/CD across multiple environments on Azure VMs with blob storage, design SEO-friendly landing pages, and operate evented services (Twilio/Vonage, Redis queues) with strong type safety. I also maintain a Turborepo mono‑repo and integrated ClickHouse for analytics.
+            </p>
+          </article>
 
-      <p>I like to play around with new stuff, write random scripts when I'm bored, configure my window manager and neovim for the 100th time and
-improving my keyboard skills.
-      </p>
+          <article class="role">
+            <h3 class="role-title">Software Developer — Bitbridge (contract)</h3>
+            <div class="meta">Japan/Trivandrum (Remote) · Jan 2025 - currently</div>
+            <p class="blurb">
+              Building a bespoke video and chat application with Kurento, while maintaining MVC Java services for media and messaging. I ship UI components in vanilla JavaScript, and operate observability with Grafana and Prometheus for Kurento and backend nodes. On mobile, I integrated OpenCV TFLite drowsiness detection and trained YOLOv5 models from datasets for deployment.
+            </p>
+          </article>
 
-      {
-        // only display if at least one social link is enabled
-        socialCount > 0 && (
-          <div class="social-wrapper">
-            <div class="social-links">Social Links:</div>
-            <Socials />
-          </div>
-        )
-      }
+          <article class="role">
+            <h3 class="role-title">Software Developer — Vrarri (contract)</h3>
+            <div class="meta">Japan (Remote) · Mar 2025 - currently</div>
+            <p class="blurb">
+              Delivering a VR training dashboard (React, Firebase, GCP Functions) and modernizing a legacy React app to Next.js for a translation platform leveraging Netlify Functions. I built a mediasoup server with a Next.js frontend for efficient VR streaming, automated Vercel deployments, and manage their Firebase and AWS environments.
+            </p>
+          </article>
+
+          <article class="role">
+            <h3 class="role-title">Freelancing</h3>
+            <div class="meta">Mar 2024 - currently</div>
+            <p class="blurb">
+              Built a Web3 app, <a href="https://app.banyangrow.xyz" target="_blank" rel="noopener noreferrer">Banyangrow</a>. Shipped UI components for a US TV provider, drove SEO fixes and production hardening, and delivered features on a legacy real‑estate platform (<a href="https://www.homekonnect.com" target="_blank" rel="noopener noreferrer">homekonnect</a>).
+            </p>
+          </article>
+
+          <article class="role">
+            <h3 class="role-title">Software Engineer — Avasoft</h3>
+            <div class="meta">Chennai · Feb 2023 - Feb 2024</div>
+            <p class="blurb">
+              Investigated and resolved production issues, authored data scripts to maintain integrity and update live databases, and implemented client‑driven enhancements with a focus on reliability and responsiveness.
+            </p>
+          </article>
+
+          <article class="role">
+            <h3 class="role-title">Salesforce Admin Intern — The Smart Bridge</h3>
+            <div class="meta">Chennai · May 2022 - Jun 2022</div>
+            <p class="blurb">
+              Learned the Salesforce admin and development ecosystem with hands‑on exposure.
+            </p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <Hr />
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="contact-actions">
+          <a href="https://cal.com/anand-mohanan/15min" class="schedule-btn" target="_blank" rel="noopener noreferrer">Schedule a call</a>
+            </div>
+        <div class="socials">
+          <Socials centered />
+        </div>
+      </div>
+    </section>
   </main>
 
   <Footer />
 </Layout>
 
 <style>
-  /* ===== Hero Section ===== */
-  #hero {
-    @apply pt-8 pb-6;
-  }
-  #hero h1 {
-    @apply inline-block font-bold my-4 sm:my-8 text-3xl sm:text-5xl;
-  }
-  #hero .rss-link {
-    @apply mb-6;
-  }
-  #hero .rss-icon {
-    @apply h-6 w-6 scale-110 sm:scale-125 mb-2 sm:mb-3 fill-skin-accent;
-  }
-  #hero p {
-    @apply my-2;
-  }
-  .social-wrapper {
-    @apply flex flex-col sm:flex-row sm:items-center mt-4;
-  }
-  .social-links {
-    @apply whitespace-nowrap mr-2 sm:mb-0 mb-1;
+  .container {
+    @apply max-w-6xl mx-auto px-4;
   }
 
-  /* ===== Featured & Recent Posts Sections ===== */
-  #featured,
-  #recent-posts {
-    @apply pt-12 pb-6;
+  .section {
+    @apply py-12;
   }
-  #featured h2,
-  #recent-posts h2 {
-    @apply font-semibold text-2xl tracking-wide;
+
+  .section-title {
+    @apply text-2xl font-bold text-center mb-8;
   }
-  .all-posts-btn-wrapper {
-    @apply text-center my-8;
+
+  .experience {
+    @apply space-y-10;
+  }
+
+  .role-title {
+    @apply text-xl font-semibold;
+  }
+
+  .meta {
+    @apply text-sm opacity-70 mb-3;
+  }
+
+  .bullets {
+    @apply list-disc pl-5 space-y-2;
+  }
+
+  .bullets li {
+    @apply leading-relaxed;
+  }
+
+  .blurb {
+    @apply leading-relaxed opacity-80;
+  }
+
+  .contact-note {
+    @apply text-center mb-4;
+  }
+
+  .simple-link {
+    @apply underline;
+  }
+
+  .contact-actions {
+    @apply flex justify-center;
+  }
+
+  .schedule-btn {
+    @apply inline-block px-6 py-3 border border-skin-line rounded font-medium hover:opacity-80;
+  }
+
+  .socials {
+    @apply mt-4 flex justify-center;
   }
 </style>
