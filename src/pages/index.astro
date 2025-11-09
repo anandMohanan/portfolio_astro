@@ -3,135 +3,243 @@ import Layout from "@layouts/Layout.astro";
 import Header from "@components/Header.astro";
 import Footer from "@components/Footer.astro";
 import Socials from "@components/Socials.astro";
+import ImageCarousel from "@components/ImageCarousel.astro";
 
 ---
 
 <Layout>
-  <Header />
   <main id="main-content">
-    <section id="experience" class="section">
-      <div class="container">
-        <div class="experience">
-          <article class="role">
-            <h3 class="role-title">Lead Developer — Vautomate AI</h3>
-            <div class="meta">Switzerland (Remote) · Mar 2024 - currently</div>
-            <p class="blurb">
-              Leading development of a customer portal from the ground up in Next.js, building production AI agents with LangChain/LangGraph, and maintaining a Dockerized stack across JavaScript frontends and Python services. I manage CI/CD across multiple environments on Azure VMs with blob storage, design SEO-friendly landing pages, and operate evented services (Twilio/Vonage, Redis queues) with strong type safety. I also maintain a Turborepo mono‑repo and integrated ClickHouse for analytics.
-            </p>
-          </article>
-
-          <article class="role">
-            <h3 class="role-title">Software Developer — Bitbridge (contract)</h3>
-            <div class="meta">Japan/Trivandrum (Remote) · Jan 2025 - currently</div>
-            <p class="blurb">
-              Building a bespoke video and chat application with Kurento, while maintaining MVC Java services for media and messaging. I ship UI components in vanilla JavaScript, and operate observability with Grafana and Prometheus for Kurento and backend nodes. On mobile, I integrated OpenCV TFLite drowsiness detection and trained YOLOv5 models from datasets for deployment.
-            </p>
-          </article>
-
-          <article class="role">
-            <h3 class="role-title">Software Developer — Vrarri (contract)</h3>
-            <div class="meta">Japan (Remote) · Mar 2025 - currently</div>
-            <p class="blurb">
-              Delivering a VR training dashboard (React, Firebase, GCP Functions) and modernizing a legacy React app to Next.js for a translation platform leveraging Netlify Functions. I built a mediasoup server with a Next.js frontend for efficient VR streaming, automated Vercel deployments, and manage their Firebase and AWS environments.
-            </p>
-          </article>
-
-          <article class="role">
-            <h3 class="role-title">Freelancing</h3>
-            <div class="meta">Mar 2024 - currently</div>
-            <p class="blurb">
-              Built a Web3 app, <a href="https://app.banyangrow.xyz" target="_blank" rel="noopener noreferrer">Banyangrow</a>. Shipped UI components for a US TV provider, drove SEO fixes and production hardening, and delivered features on a legacy real‑estate platform (<a href="https://www.homekonnect.com" target="_blank" rel="noopener noreferrer">homekonnect</a>).
-            </p>
-          </article>
-
-          <article class="role">
-            <h3 class="role-title">Software Engineer — Avasoft</h3>
-            <div class="meta">Chennai · Feb 2023 - Feb 2024</div>
-            <p class="blurb">
-              Investigated and resolved production issues, authored data scripts to maintain integrity and update live databases, and implemented client‑driven enhancements with a focus on reliability and responsiveness.
-            </p>
-          </article>
-
-          <article class="role">
-            <h3 class="role-title">Salesforce Admin Intern — The Smart Bridge</h3>
-            <div class="meta">Chennai · May 2022 - Jun 2022</div>
-            <p class="blurb">
-              Learned the Salesforce admin and development ecosystem with hands‑on exposure.
-            </p>
-          </article>
+    <div class="portfolio-layout">
+      <!-- Left Section: Fixed, 30% width -->
+      <aside class="left-section">
+        <div class="name-section">
+          <h1 class="name">Anand Mohanan</h1>
+          <p class="description">Full‑Stack Engineer & AI Specialist</p>
         </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="contact-actions">
-          <a href="https://cal.com/anand-mohanan/15min" class="schedule-btn" target="_blank" rel="noopener noreferrer">Schedule a call</a>
-            </div>
-        <div class="socials">
-          <Socials centered />
+        <div id="contact" class="contact-section">
+          <div class="contact-actions">
+            <a href="https://cal.com/anand-mohanan/15min" class="schedule-btn" target="_blank" rel="noopener noreferrer">Schedule a call</a>
+          </div>
+          <div class="socials">
+            <Socials centered />
+          </div>
         </div>
-      </div>
-    </section>
+        <Footer />
+
+      </aside>
+
+      <!-- Right Section: Scrollable, 70% width -->
+      <section class="right-section">
+        <div class="about-content">
+          <h2 class="section-title">About</h2>
+          <p class="about-text">
+            I strive to stay current and meet the needs of users by keeping up with the constantly
+            evolving field of computing and new programming languages that arise. I also aim to assist new developers.
+          </p>
+
+          <div class="experience">
+            <article class="role">
+              <h3 class="role-title">Lead Developer — Vautomate AI</h3>
+              <div class="meta">Switzerland (Remote) · Mar 2024 - currently</div>
+              <ul class="blurb">
+                <li>Built their landing pages (<a href="https://vautomate.ai" target="_blank" rel="noopener noreferrer">vautomate.ai</a>) and web dashboard (<a href="https://app.vautomate.ai" target="_blank" rel="noopener noreferrer">app.vautomate.ai</a>)</li>
+                <li>Leading development using Next.js, Tailwind CSS, LangChain, and LangGraph</li>
+                <li>Fixed bugs in the backend which uses FastAPI, LangGraph deep agent, and Langfuse</li>
+                <li>Building production AI agents and maintaining a Dockerized stack across JavaScript frontends and Python services</li>
+                <li>Managing CI/CD across multiple environments on Azure VMs with blob storage, designing SEO-friendly landing pages, and operating evented services with strong type safety</li>
+              </ul>
+              <ImageCarousel images={[ '/public/vautomate/landing.png', '/public/vautomate/2.png', '/public/vautomate/3.png']} />
+            </article>
+
+            <article class="role">
+              <h3 class="role-title">Team Lead — Bitbridge</h3>
+              <div class="meta">United Kingdom (Remote) · Jan 2025 - currently</div>
+              <ul class="blurb">
+                <li>Leading a team to update legacy systems and build web components in vanilla JavaScript for a healthcare provider</li>
+                <li>Built their in-house video server using Java Kurento for compliance and messaging service using RabbitMQ, which is used by millions in the US</li>
+                <li>Managing observability with Grafana and Prometheus for Kurento and backend nodes</li>
+              </ul>
+              <ImageCarousel images={[]} />
+            </article>
+
+            <article class="role">
+              <h3 class="role-title">AI Team Lead — Hawksight</h3>
+              <div class="meta">United Kingdom (Remote) · Currently</div>
+              <ul class="blurb">
+                <li>Built custom trained YOLO models for PPE and drowsiness detection, integrated in Android app using Java and Kotlin</li>
+                <li>Implemented real-time alerts when anomalies are found</li>
+                <li>Integrated the model in hardware systems for real-time use cases</li>
+                <li>Created face recognition functionality</li>
+                <li>Exhibited their product at Expand North Star in Dubai</li>
+                <li>Working on their expansion in UAE, integrating solutions into IP4 cameras</li>
+              </ul>
+              <ImageCarousel images={[ '/public/hawksight/1.png', '/public/hawksight/2.png']} />
+            </article>
+
+            <article class="role">
+              <h3 class="role-title">Software Developer — VVRARRI ( Part Time )</h3>
+              <div class="meta">Japan (Remote) · Mar 2025 - currently</div>
+              <ul class="blurb">
+                <li>Built their user creation app and staff app for VR attraction stores in Japan</li>
+                <li>Created a custom reservation app for reservations in their VR store integrating Stripe</li>
+                <li>Built a full-fledged admin app for managing stores, calendar, store closures, reservation updates, game slot updates, and experience updates</li>
+                <li>Implemented their game to a website using Unity WebGL</li>
+                <li>These applications are actively used in production</li>
+              </ul>
+              <ImageCarousel images={[]} />
+            </article>
+
+            <article class="role">
+              <h3 class="role-title">Freelancing</h3>
+              <div class="meta">Mar 2024 - currently</div>
+              <ul class="blurb">
+                <li>Built a Web3 app, <a href="https://app.banyangrow.xyz" target="_blank" rel="noopener noreferrer">Banyangrow</a></li>
+                <li>Shipped UI components for a US TV provider</li>
+                <li>Drove SEO fixes and production hardening</li>
+                <li>Delivered features on a legacy real‑estate platform (<a href="https://www.homekonnect.com" target="_blank" rel="noopener noreferrer">homekonnect</a>)</li>
+              </ul>
+              <ImageCarousel images={[]} />
+            </article>
+
+            <article class="role">
+              <h3 class="role-title">Software Engineer — Avasoft</h3>
+              <div class="meta">Chennai · Feb 2023 - Feb 2024</div>
+              <ul class="blurb">
+                <li>Investigated and resolved production issues</li>
+                <li>Authored data scripts to maintain integrity and update live databases</li>
+                <li>Implemented client‑driven enhancements with a focus on reliability and responsiveness</li>
+              </ul>
+              <ImageCarousel images={[]} />
+            </article>
+
+            <article class="role">
+              <h3 class="role-title">Salesforce Admin Intern — The Smart Bridge</h3>
+              <div class="meta">Chennai · May 2022 - Jun 2022</div>
+              <ul class="blurb">
+                <li>Learned the Salesforce admin and development ecosystem with hands‑on exposure</li>
+              </ul>
+              <ImageCarousel images={[]} />
+            </article>
+          </div>
+
+          
+        </div>
+      </section>
+    </div>
   </main>
 
-  <Footer />
 </Layout>
 
 <style>
-  .container {
-    @apply max-w-6xl mx-auto px-4;
+  #main-content {
+    @apply flex-1;
   }
 
-  .section {
-    @apply py-12;
+  .portfolio-layout {
+    @apply flex relative;
+    min-height: calc(100vh - 200px);
+  }
+
+  /* Left Section: 30% width, fixed */
+  .left-section {
+    @apply flex flex-col items-start justify-start p-8 border-r border-skin-line bg-skin-fill;
+    width: 30%;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .name-section {
+    @apply mt-8;
+  }
+
+  .name {
+    @apply text-3xl font-bold mb-4;
+  }
+
+  .description {
+    @apply text-lg opacity-80 leading-relaxed;
+  }
+
+  /* Right Section: 70% width, scrollable */
+  .right-section {
+    @apply overflow-y-auto;
+    width: 70%;
+    flex: 1;
+  }
+
+  .about-content {
+    @apply p-8 max-w-7xl;
   }
 
   .section-title {
-    @apply text-2xl font-bold text-center mb-8;
+    @apply text-2xl font-bold mb-6;
+  }
+
+  .about-text {
+    @apply leading-relaxed opacity-80 mb-10;
   }
 
   .experience {
-    @apply space-y-10;
+    @apply space-y-12 mb-12;
   }
 
   .role-title {
-    @apply text-xl font-semibold;
+    @apply text-xl font-semibold mb-2;
   }
 
   .meta {
-    @apply text-sm opacity-70 mb-3;
-  }
-
-  .bullets {
-    @apply list-disc pl-5 space-y-2;
-  }
-
-  .bullets li {
-    @apply leading-relaxed;
+    @apply text-sm opacity-70 mb-4;
   }
 
   .blurb {
     @apply leading-relaxed opacity-80;
   }
 
-  .contact-note {
-    @apply text-center mb-4;
+  .blurb li {
+    @apply mb-2;
   }
 
-  .simple-link {
-    @apply underline;
+  .blurb ul {
+    @apply list-disc list-inside;
+  }
+
+  .blurb a {
+    @apply underline hover:text-skin-accent;
+  }
+
+  .contact-section {
+    @apply mt-16 pt-8 border-t border-skin-line;
   }
 
   .contact-actions {
-    @apply flex justify-center;
+    @apply flex justify-start mb-6;
   }
 
   .schedule-btn {
-    @apply inline-block px-6 py-3 border border-skin-line rounded font-medium hover:opacity-80;
+    @apply inline-block px-6 py-3 border border-skin-line rounded font-medium hover:opacity-80 transition-opacity;
   }
 
   .socials {
-    @apply mt-4 flex justify-center;
+    @apply flex justify-start;
+  }
+
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .portfolio-layout {
+      @apply flex-col h-auto;
+    }
+
+    .left-section {
+      @apply w-full border-r-0 border-b h-auto sticky relative;
+      position: relative;
+      height: auto;
+    }
+
+    .right-section {
+      @apply w-full;
+    }
   }
 </style>

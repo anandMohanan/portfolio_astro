@@ -1,0 +1,57 @@
+---
+export interface Props {
+  images?: string[];
+}
+
+const { images = [] } = Astro.props;
+---
+
+{images.length > 0 && (
+  <div class="carousel-container">
+    <div class="carousel-track">
+      {images.map((image) => (
+        <div class="carousel-slide">
+          <img src={image} alt="" loading="lazy" />
+        </div>
+      ))}
+    </div>
+  </div>
+)}
+
+<style>
+  .carousel-container {
+    @apply mt-4 overflow-x-auto;
+    scrollbar-width: thin;
+  }
+
+  .carousel-track {
+    @apply flex gap-4 pb-2;
+    min-width: min-content;
+  }
+
+  .carousel-slide {
+    @apply flex-shrink-0;
+    width: 300px;
+    height: 200px;
+  }
+
+  .carousel-slide img {
+    @apply w-full h-full object-cover rounded border border-skin-line;
+  }
+
+  .carousel-container::-webkit-scrollbar {
+    @apply h-2;
+  }
+
+  .carousel-container::-webkit-scrollbar-track {
+    @apply bg-skin-fill;
+  }
+
+  .carousel-container::-webkit-scrollbar-thumb {
+    @apply bg-skin-card rounded;
+  }
+
+  .carousel-container::-webkit-scrollbar-thumb:hover {
+    @apply bg-skin-card-muted;
+  }
+</style>
