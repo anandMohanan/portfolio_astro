@@ -1,359 +1,216 @@
 ---
 import Layout from "@layouts/Layout.astro";
-import Header from "@components/Header.astro";
-import Footer from "@components/Footer.astro";
 import Socials from "@components/Socials.astro";
-import ImageCarousel from "@components/ImageCarousel.astro";
 ---
 
 <Layout>
-  <main id="main-content">
-    <div class="portfolio-layout">
+  <main class="container">
+    <header class="header">
+      <h1 class="name">Anand Mohanan</h1>
+      <p class="title">Full-Stack Engineer & AI Specialist</p>
       
-      <!-- Left Section: Fixed Info -->
-      <aside class="left-section">
-        <div class="sticky-wrapper">
-          <div class="name-section fade-in-stagger">
-            <h1 class="name">Anand Mohanan</h1>
-            <p class="description">Full‑Stack Engineer & AI Specialist</p>
-          </div>
-          
-          <div id="contact" class="contact-section fade-in-stagger" style="animation-delay: 150ms;">
-            <div class="contact-actions">
-              <a 
-                href="https://cal.com/anand-mohanan/15min" 
-                class="schedule-btn group" 
-                target="_blank" 
-                rel="noopener noreferrer"
-              >
-                <span class="btn-text">Schedule a call</span>
-                <svg xmlns="http://www.w3.org/2000/svg" class="btn-icon group-hover:translate-x-1 transition-transform" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-              </a>
-            </div>
-            <div class="socials">
-              <Socials centered />
-            </div>
-          </div>
-          
-          <div class="footer-wrapper fade-in-stagger" style="animation-delay: 300ms;">
-             <Footer />
-          </div>
-        </div>
-      </aside>
+      <div class="socials">
+        <Socials centered />
+      </div>
+    </header>
 
-      <!-- Right Section: Scrollable Content -->
-      <section class="right-section">
-        <div class="about-content">
-          <h2 class="section-title scroll-reveal">About</h2>
-          <p class="about-text scroll-reveal">
-            I strive to stay current and meet the needs of users by keeping up with the constantly
-            evolving field of computing and new programming languages that arise. I also aim to assist new developers.
+    <section class="section">
+      <h2 class="section-title">About</h2>
+      <p class="about-text">
+        I build AI-powered products and help companies scale their technical infrastructure. 
+        Currently focused on LLM applications, agent systems, and full-stack development.
+      </p>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Experience</h2>
+      
+      <div class="jobs">
+        <article class="job">
+          <div class="job-header">
+            <h3 class="job-title">Lead Developer — Vautomate AI</h3>
+            <span class="job-meta">Mar 2024 — Present · Switzerland (Remote)</span>
+          </div>
+          <p class="job-desc">
+            Building AI agents using LangChain & LangGraph. Developed landing pages and dashboard at vautomate.ai. 
+            Managing Dockerized stack across Next.js frontends and Python services on Azure.
           </p>
+        </article>
 
-          <div class="experience">
-            
-            <!-- Role 1 -->
-            <article class="role scroll-reveal">
-              <h3 class="role-title">Lead Developer — Vautomate AI</h3>
-              <div class="meta">Switzerland (Remote) · Mar 2024 - currently</div>
-              <ul class="blurb">
-                <li>Built their landing pages (<a href="https://vautomate.ai" class="animated-link" target="_blank" rel="noopener noreferrer">vautomate.ai</a>) and web dashboard (<a href="https://app.vautomate.ai" class="animated-link" target="_blank" rel="noopener noreferrer">app.vautomate.ai</a>)</li>
-                <li>Leading development using Next.js, LangChain, and LangGraph</li>
-                <li>Building production AI agents using Langgraph and Langgchain</li>
-                <li>Maintaining a Dockerized stack across JavaScript frontends and Python services</li>
-                <li>Managing CI/CD across multiple environments on Azure VMs with blob storage, designing SEO-friendly landing pages, and operating evented services with strong type safety</li>
-              </ul>
-              <div class="carousel-wrapper">
-                <ImageCarousel images={[ '/vautomate/landing.png', '/vautomate/2.png', '/vautomate/3.png']} />
-              </div>
-            </article>
-
-            <!-- Role 2 -->
-            <article class="role scroll-reveal">
-              <h3 class="role-title">Team Lead — Bitbridge</h3>
-              <div class="meta">United Kingdom (Remote) · Jan 2025 - currently</div>
-              <ul class="blurb">
-                <li>Leading a team to update legacy systems and build web components in vanilla JavaScript for a healthcare provider which i used by more than 1 million users.</li>
-                <li>Built their in-house video server using Java Kurento for compliance and messaging service using RabbitMQ.</li>
-                <li>Managing observability with Grafana and Prometheus for Kurento and backend nodes</li>
-                <li>Created a custom face recognition system for an Android app for a health monitoring system.</li>
-              </ul>
-              <ImageCarousel images={[]} />
-            </article>
-
-            <!-- Role 3 -->
-            <article class="role scroll-reveal">
-              <h3 class="role-title">AI Team Lead — Hawksight</h3>
-              <div class="meta">United Kingdom (Remote) · Currently</div>
-              <ul class="blurb">
-                <li>Built custom trained YOLO models for PPE and drowsiness detection, integrated in Android app using Java and Kotlin</li>
-                <li>Implemented real-time alerts when anomalies are found</li>
-                <li>Integrated the model in hardware systems for real-time use cases</li>
-                <li>Created face recognition functionality</li>
-                <li>Exhibited their product at Expand North Star in Dubai and Excon in Bangalore</li>
-                <li>Working on their expansion in UAE and India including marketing and management tasks, integrating solutions into IP4 cameras</li>
-              </ul>
-              <div class="carousel-wrapper">
-                <ImageCarousel images={[ '/hawksight/1.png', '/hawksight/2.png']} />
-              </div>
-            </article>
-
-            <!-- Role 4 -->
-            <article class="role scroll-reveal">
-              <h3 class="role-title">Software Developer — VVRARRI ( Part Time )</h3>
-              <div class="meta">Japan (Remote) · Mar 2025 - currently</div>
-              <ul class="blurb">
-                <li>Built their user creation app and staff app for VR attraction stores in Japan</li>
-                <li>Created a custom reservation app for reservations in their VR store integrating Stripe</li>
-                <li>Built a full-fledged admin app for managing stores, calendar, store closures, reservation updates, game slot updates, and experience updates</li>
-                <li>Implemented their game to a website using Unity WebGL</li>
-                <li>These applications are actively used in production in Japan.</li>
-              </ul>
-              <ImageCarousel images={[]} />
-            </article>
-
-            <!-- Role 5 -->
-            <article class="role scroll-reveal">
-              <h3 class="role-title">Freelancing</h3>
-              <div class="meta">Mar 2024 - currently</div>
-              <ul class="blurb">
-                <li>Built a Web3 app, <a href="https://app.banyangrow.xyz" class="animated-link" target="_blank" rel="noopener noreferrer">Banyangrow</a></li>
-                <li>Shipped UI components for a US TV provider</li>
-                <li>Drove SEO fixes and production hardening</li>
-                <li>Delivered features on a legacy real‑estate platform (<a href="https://www.homekonnect.com" class="animated-link" target="_blank" rel="noopener noreferrer">homekonnect</a>)</li>
-              </ul>
-              <ImageCarousel images={[]} />
-            </article>
-
-            <!-- Role 6 -->
-            <article class="role scroll-reveal">
-              <h3 class="role-title">Software Engineer — Avasoft</h3>
-              <div class="meta">Chennai · Feb 2023 - Feb 2024</div>
-              <ul class="blurb">
-                <li>Investigated and resolved production issues</li>
-                <li>Authored data scripts to maintain integrity and update live databases</li>
-                <li>Implemented client‑driven enhancements with a focus on reliability and responsiveness</li>
-              </ul>
-              <ImageCarousel images={[]} />
-            </article>
-
-            <!-- Role 7 -->
-            <article class="role scroll-reveal">
-              <h3 class="role-title">Salesforce Admin Intern — The Smart Bridge</h3>
-              <div class="meta">Chennai · May 2022 - Jun 2022</div>
-              <ul class="blurb">
-                <li>Learned the Salesforce admin and development ecosystem with hands‑on exposure</li>
-              </ul>
-              <ImageCarousel images={[]} />
-            </article>
+        <article class="job">
+          <div class="job-header">
+            <h3 class="job-title">Team Lead — Bitbridge</h3>
+            <span class="job-meta">Jan 2025 — Present · UK (Remote)</span>
           </div>
-        </div>
-      </section>
-    </div>
+          <p class="job-desc">
+            Leading a team modernizing legacy healthcare systems. Built video server using Java Kurento, 
+            messaging with RabbitMQ, and custom face recognition for Android. Managing observability with Grafana/Prometheus.
+          </p>
+        </article>
+
+        <article class="job">
+          <div class="job-header">
+            <h3 class="job-title">AI Team Lead — Hawksight</h3>
+            <span class="job-meta">2024 — Present · UK (Remote)</span>
+          </div>
+          <p class="job-desc">
+            Built custom YOLO models for PPE and drowsiness detection. Integrated real-time alerts and face recognition 
+            into Android apps. Exhibited at Expand North Star Dubai and Excon Bangalore.
+          </p>
+        </article>
+
+        <article class="job">
+          <div class="job-header">
+            <h3 class="job-title">Software Developer — VVRARRI (Part-time)</h3>
+            <span class="job-meta">Mar 2025 — Present · Japan (Remote)</span>
+          </div>
+          <p class="job-desc">
+            Built user creation app, staff app, and reservation system with Stripe integration. 
+            Created admin dashboard for store management. Deployed Unity WebGL game to web.
+          </p>
+        </article>
+
+        <article class="job">
+          <div class="job-header">
+            <h3 class="job-title">Software Engineer — Avasoft</h3>
+            <span class="job-meta">Feb 2023 — Feb 2024 · Chennai</span>
+          </div>
+          <p class="job-desc">
+            Resolved production issues and authored data scripts for database integrity. 
+            Implemented client-driven enhancements for enterprise applications.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2 class="section-title">Connect</h2>
+      <p class="connect-text">
+        Open to interesting projects and conversations. 
+        <a href="https://cal.com/anand-mohanan/15min" class="link">Schedule a call</a> or just say hi.
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© {new Date().getFullYear()} Anand Mohanan</p>
+    </footer>
   </main>
 </Layout>
 
-<script>
-  // Simple Intersection Observer to trigger animations when elements scroll into view
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.1
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target); // Only animate once
-      }
-    });
-  }, observerOptions);
-
-  document.querySelectorAll('.scroll-reveal').forEach((el) => {
-    observer.observe(el);
-  });
-</script>
-
 <style>
-  #main-content {
-    @apply flex-1;
+  .container {
+    max-width: 680px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
   }
 
-  .portfolio-layout {
-    @apply flex relative;
-    min-height: 100vh;
-  }
-
-  /* --- Left Section --- */
-  .left-section {
-    @apply flex flex-col p-8 md:p-12 border-r border-skin-line bg-skin-fill;
-    width: 30%;
-    /* Make sticky work by defining height */
-    height: 100vh; 
-    position: sticky;
-    top: 0;
-  }
-
-  .sticky-wrapper {
-    @apply flex flex-col h-full justify-between;
-  }
-
-  .name-section {
-    @apply mt-8;
+  .header {
+    margin-bottom: 4rem;
   }
 
   .name {
-    @apply text-3xl font-bold mb-4 tracking-tight text-skin-base;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 0.5rem;
   }
 
-  .description {
-    @apply text-lg opacity-80 leading-relaxed font-light;
-  }
-
-  /* --- Right Section --- */
-  .right-section {
-    @apply w-full overflow-y-auto;
-    width: 70%;
-  }
-
-  .about-content {
-    @apply p-8 md:p-16 max-w-4xl mx-auto;
-  }
-
-  .section-title {
-    @apply text-sm font-bold uppercase tracking-widest opacity-50 mb-8;
-  }
-
-  .about-text {
-    @apply text-lg leading-relaxed opacity-90 mb-16 max-w-2xl;
-  }
-
-  .experience {
-    @apply space-y-16 mb-12;
-  }
-
-  /* --- Role Cards Micro-interactions --- */
-  .role {
-    @apply relative pl-6 border-l-2 border-transparent transition-all duration-300 ease-out;
-  }
-
-  .role:hover {
-    @apply border-skin-accent;
-  }
-
-  .role-title {
-    @apply text-xl font-semibold mb-2 text-skin-base transition-colors;
-  }
-
-  .role:hover .role-title {
-    @apply text-skin-accent;
-  }
-
-  .meta {
-    @apply text-sm font-mono opacity-60 mb-4 block;
-  }
-
-  .blurb {
-    @apply leading-relaxed opacity-80 text-base;
-  }
-
-  .blurb li {
-    @apply mb-2 relative;
-  }
-  
-  /* --- Link Animation (The "Cool" Minimal Link) --- */
-  .animated-link, .blurb a {
-    @apply relative inline-block text-skin-base font-medium no-underline;
-    background-image: linear-gradient(currentColor, currentColor);
-    background-position: 0% 100%;
-    background-repeat: no-repeat;
-    background-size: 0% 1px;
-    transition: background-size 0.3s ease, color 0.3s ease;
-  }
-
-  .animated-link:hover, .blurb a:hover {
-    background-size: 100% 1px;
-    @apply text-skin-accent;
-  }
-
-  /* --- Button Animation --- */
-  .contact-section {
-    @apply mt-auto pt-8;
-  }
-
-  .contact-actions {
-    @apply flex justify-start mb-6;
-  }
-
-  .schedule-btn {
-    @apply flex items-center gap-2 px-6 py-3 border border-skin-line rounded text-sm font-medium transition-all duration-300;
-    background: transparent;
-  }
-
-  .schedule-btn:hover {
-    @apply border-skin-accent text-skin-accent -translate-y-0.5 shadow-sm;
+  .title {
+    font-size: 1.125rem;
+    opacity: 70%;
+    margin-bottom: 1.5rem;
   }
 
   .socials {
-    @apply flex justify-start opacity-70 hover:opacity-100 transition-opacity;
+    margin-top: 1rem;
   }
 
-  /* --- Animations --- */
-
-  /* Initial Load Animation for Left Sidebar */
-  .fade-in-stagger {
-    opacity: 0;
-    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  .section {
+    margin-bottom: 4rem;
   }
 
-  @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  .section-title {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    opacity: 50%;
+    margin-bottom: 1.5rem;
   }
 
-  /* Scroll Reveal Animation classes (triggered by JS) */
-  .scroll-reveal {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  .about-text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    opacity: 85%;
   }
 
-  .scroll-reveal.is-visible {
-    opacity: 1;
-    transform: translateY(0);
+  .jobs {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
   }
 
-  /* Carousel styling tweaks */
-  .carousel-wrapper {
-    @apply mt-6 opacity-90 hover:opacity-100 transition-opacity duration-500;
+  .job {
+    padding-bottom: 2.5rem;
+    border-bottom: 1px solid rgb(var(--color-border));
   }
 
-  /* --- Responsive --- */
-  @media (max-width: 768px) {
-    .portfolio-layout {
-      @apply flex-col h-auto;
+  .job:last-child {
+    border-bottom: none;
+  }
+
+  .job-header {
+    margin-bottom: 0.75rem;
+  }
+
+  .job-title {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+  }
+
+  .job-meta {
+    font-size: 0.875rem;
+    opacity: 60%;
+  }
+
+  .job-desc {
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 80%;
+  }
+
+  .connect-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    opacity: 85%;
+  }
+
+  .link {
+    color: rgb(var(--color-text-base));
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .link:hover {
+    opacity: 70%;
+  }
+
+  .footer {
+    margin-top: 4rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgb(var(--color-border));
+    font-size: 0.875rem;
+    opacity: 50%;
+  }
+
+  @media (max-width: 640px) {
+    .container {
+      padding: 2.5rem 1.25rem;
     }
 
-    .left-section {
-      @apply w-full border-r-0 border-b h-auto relative p-8;
-      position: relative;
-    }
-    
-    .sticky-wrapper {
-      @apply block;
-    }
-
-    .footer-wrapper {
-      @apply mt-8;
-    }
-
-    .right-section {
-      @apply w-full;
-    }
-    
-    .role {
-      @apply pl-4;
+    .name {
+      font-size: 2rem;
     }
   }
 </style>
