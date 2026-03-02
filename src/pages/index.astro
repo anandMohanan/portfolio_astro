@@ -270,9 +270,29 @@ import Socials from "@components/Socials.astro";
     margin-top: 1rem;
   }
 
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
   .section {
     margin-bottom: 4rem;
+    opacity: 0;
+    animation: fadeInUp 400ms ease-out forwards;
   }
+
+  .section:nth-child(2) { animation-delay: 0.1s; }
+  .section:nth-child(3) { animation-delay: 0.2s; }
+  .section:nth-child(4) { animation-delay: 0.3s; }
+  .section:nth-child(5) { animation-delay: 0.4s; }
+  .section:nth-child(6) { animation-delay: 0.5s; }
+  .section:nth-child(7) { animation-delay: 0.6s; }
 
   .section-title {
     font-size: 0.75rem;
@@ -292,6 +312,15 @@ import Socials from "@components/Socials.astro";
     display: grid;
     grid-template-columns: 140px 1fr;
     gap: 1rem;
+    padding: 0.5rem 0.75rem;
+    margin: -0.5rem -0.75rem;
+    border-radius: 8px;
+    transition: background-color 180ms ease-out, transform 180ms ease-out;
+  }
+
+  .skill-category:hover {
+    background-color: rgba(var(--color-border), 0.3);
+    transform: translateX(4px);
   }
 
   .skill-label {
@@ -314,6 +343,12 @@ import Socials from "@components/Socials.astro";
   .job {
     padding-bottom: 2.5rem;
     border-bottom: 1px solid rgb(var(--color-border));
+    transition: opacity 180ms ease-out, transform 180ms ease-out;
+  }
+
+  .job:hover {
+    opacity: 1;
+    transform: translateY(-2px);
   }
 
   .job:last-child {
@@ -355,10 +390,23 @@ import Socials from "@components/Socials.astro";
   .project-name a {
     color: inherit;
     text-decoration: none;
+    position: relative;
+    display: inline-block;
   }
 
-  .project-name a:hover {
-    text-decoration: underline;
+  .project-name a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 1px;
+    background: currentColor;
+    transition: width 200ms ease-out;
+  }
+
+  .project-name a:hover::after {
+    width: 100%;
   }
 
   .project-desc {
@@ -380,6 +428,12 @@ import Socials from "@components/Socials.astro";
     opacity: 80%;
     padding-left: 1.25rem;
     position: relative;
+    transition: padding-left 180ms ease-out, opacity 180ms ease-out;
+  }
+
+  .certifications li:hover {
+    padding-left: 1.5rem;
+    opacity: 1;
   }
 
   .certifications li::before {
@@ -466,7 +520,7 @@ import Socials from "@components/Socials.astro";
       jobVrarriTitle: "Software Developer & QA Lead (Contract) - Vrarri",
       jobVrarriMeta: "Mar 2025 - Present · Japan (Remote)",
       jobVrarriDesc:
-        "Built user onboarding, staff management, and reservation applications for VR attraction stores in Japan. Developed a Stripe-integrated reservation system and a full-featured admin dashboard. Implemented VR game deployment using Unity WebGL. Built a VR training dashboard using React, Firebase, and GCP Cloud Functions. Migrated a legacy React app to Next.js for a real-time translation platform. Built a Mediasoup server integrated with a Next.js frontend for live VR streaming. Automated CI/CD pipelines and managed Firebase, AWS, and Vercel deployments. Also managing end-to-end QA across releases, regression coverage, and production readiness.",
+        "Built user onboarding, staff management, and reservation applications for VR attraction stores in Japan. Developed a Stripe-integrated reservation system and a full-featured admin dashboard. Implemented VR game deployment using Unity WebGL. Built a VR training dashboard using React, Firebase, and GCP Cloud Functions. Migrated a legacy React app to Next.js for a real-time translation platform. Built a Mediasoup server integrated with a Next.js frontend for live VR streaming. Automated CI/CD pipelines and managed Firebase, AWS, and Vercel deployments. Also managing end-to-end QA for VR games, ensuring compatibility and performance across India and Japan markets.",
       jobFreelanceTitle: "Freelance Software Consultant",
       jobFreelanceMeta: "Mar 2024 - Present",
       jobFreelanceDesc:
@@ -526,7 +580,7 @@ import Socials from "@components/Socials.astro";
       jobVrarriTitle: "ソフトウェア開発者・QAリード（契約）- Vrarri",
       jobVrarriMeta: "2025年3月 - 現在 · 日本（リモート）",
       jobVrarriDesc:
-        "日本のVRアトラクション店舗向けに、ユーザー導線、スタッフ管理、予約システムを開発。Stripe連携の予約機能と管理ダッシュボードを実装。Unity WebGLでVRゲーム配信を実装。React、Firebase、GCP Cloud FunctionsでVRトレーニングダッシュボードを構築。既存ReactアプリをNext.jsへ移行し、リアルタイム翻訳基盤を改善。Next.jsフロントエンドと連携したMediasoupサーバーを構築し、ライブVR配信を実現。CI/CDを自動化し、Firebase/AWS/Vercelを運用。さらに、リリース横断のQA、回帰テスト範囲管理、本番リリース判定も担当。",
+        "日本のVRアトラクション店舗向けに、ユーザー導線、スタッフ管理、予約システムを開発。Stripe連携の予約機能と管理ダッシュボードを実装。Unity WebGLでVRゲーム配信を実装。React、Firebase、GCP Cloud FunctionsでVRトレーニングダッシュボードを構築。既存ReactアプリをNext.jsへ移行し、リアルタイム翻訳基盤を改善。Next.jsフロントエンドと連携したMediasoupサーバーを構築し、ライブVR配信を実現。CI/CDを自動化し、Firebase/AWS/Vercelを運用。さらに、VRゲームのQA業務を担当し、インドと日本市場での互換性とパフォーマンスを確保。",
       jobFreelanceTitle: "フリーランス ソフトウェアコンサルタント",
       jobFreelanceMeta: "2024年3月 - 現在",
       jobFreelanceDesc:
