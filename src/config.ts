@@ -3,9 +3,9 @@ import type { SocialObjects } from "./types";
 export const SITE = {
     website: "https://anandmohanan.com/",
     author: "Anand Mohanan",
-    desc: "Anand mohanan portfolio",
+    desc: "Anand Mohanan builds full-stack products, AI agents, and computer vision systems. Explore his experience, projects, and writing at Niemand Journal.",
     title: "Anand Mohanan",
-    ogImage: "https://utfs.io/f/933b1af5-8a2d-427e-95cf-57732358c527-1nq2cb.svg",
+    ogImage: "/og.png",
     lightAndDarkMode: true,
     postPerPage: 3,
 };

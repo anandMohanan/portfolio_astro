@@ -4,7 +4,7 @@ import Socials from "@components/Socials.astro";
 ---
 
 <Layout>
-  <main class="container">
+  <main id="main-content" class="container">
     <header class="header">
       <div class="top-controls">
         <div class="lang-toggle" role="group" aria-label="Language switcher">
@@ -18,9 +18,15 @@ import Socials from "@components/Socials.astro";
       <p class="location" data-i18n="location">Chennai, India</p>
 
       <div class="socials">
-        <Socials centered />
+        <Socials />
       </div>
     </header>
+
+    <section class="section journal-intro" lang="en">
+      <h2 class="section-title">Writing</h2>
+      <p>Experiments with AI, notes on building software, and entries from Niemand.</p>
+      <a class="link" href="https://www.niemand.blog/">Read Niemand Journal →</a>
+    </section>
 
     <section class="section">
       <h2 class="section-title" data-i18n="skillsTitle">Skills</h2>
@@ -60,6 +66,13 @@ import Socials from "@components/Socials.astro";
       <h2 class="section-title" data-i18n="expTitle">Experience</h2>
 
       <div class="jobs">
+        <article class="job">
+          <div class="job-header">
+            <h3 class="job-title" data-i18n="jobBeinexTitle">AI Specialist - Beinex</h3>
+            <span class="job-meta" data-i18n="jobBeinexMeta">Jun 2026 - Present · Full-time, On-site</span>
+          </div>
+        </article>
+
         <article class="job">
           <div class="job-header">
             <h3 class="job-title" data-i18n="jobVautomateTitle">Lead Product Engineer - VAutomate AI</h3>
@@ -174,6 +187,16 @@ import Socials from "@components/Socials.astro";
     <section class="section">
       <h2 class="section-title" data-i18n="certTitle">Certifications</h2>
       <ul class="certifications">
+        <li class="certificate" lang="en">
+          <a href="https://credential.nvidia.com/6b579117-84b4-4dc6-b289-5e46a72bb65f">NVIDIA-Certified Professional: Agentic AI</a>
+          <span class="credential-meta">NVIDIA · Issued Oct 2026, expires Oct 2028</span>
+          <span class="credential-meta">Credential ID 197507626</span>
+        </li>
+        <li class="certificate" lang="en">
+          <a href="https://badgecert.com/bc/html/profile.jsp?k=vwhfjyu">Certified Scrum Product Owner (CSPO)</a>
+          <span class="credential-meta">Scrum Alliance · Issued Jun 2026, expires Jun 2028</span>
+          <span class="credential-meta">Credential ID 001681589</span>
+        </li>
         <li data-i18n="cert1">Certified ScrumMaster - Scrum Alliance</li>
         <li data-i18n="cert2">Generative AI Fundamentals - Databricks</li>
         <li data-i18n="cert3">Graph Developer (Professional & Associate) - Apollo GraphQL</li>
@@ -185,77 +208,46 @@ import Socials from "@components/Socials.astro";
 
     <section class="section">
       <h2 class="section-title" data-i18n="connectTitle">Connect</h2>
+      <p class="more-links"><a href="/about/">About</a> / <a href="/tools/">Tools</a></p>
       <p class="connect-text">
-        <span data-i18n="connectLead">Open to interesting projects and conversations.</span>
-        <a href="https://cal.com/anand-mohanan/15min" class="link" data-i18n="connectCta">Schedule a call</a>
-        <span data-i18n="connectTail">or just say hi.</span>
+        <span data-i18n="connectLead">Currently an AI Specialist at Beinex. Always happy to talk about AI and software.</span>
+        <a href="https://www.linkedin.com/in/anand-mohanan" class="link" data-i18n="connectCta">Say hello</a>
       </p>
     </section>
 
-    <footer class="footer">
-      <p>© {new Date().getFullYear()} Anand Mohanan</p>
-    </footer>
+
   </main>
 </Layout>
 
 <style>
+  .more-links { font-size: .8125rem; color: var(--text-dim); margin-bottom: 1rem; }
+  .journal-intro p { color: var(--text-dim); margin-bottom: .5rem; }
   .container {
     max-width: 680px;
     margin: 0 auto;
-    padding: 2.75rem 1.5rem 4rem;
+    width: 100%;
+    padding: 0 1.5rem;
   }
 
   .header {
-    margin-bottom: 4rem;
+    position: relative;
+    margin-bottom: 3rem;
   }
 
-  .top-controls {
-    display: flex;
-    justify-content: flex-end;
-    margin-bottom: 1.5rem;
-  }
-
-  .lang-toggle {
-    display: inline-flex;
-    border: 1px solid rgb(var(--color-border));
-    border-radius: 999px;
-    padding: 0.25rem;
-    gap: 0.25rem;
-    background: rgb(var(--color-fill));
-  }
-
-  .lang-btn {
-    border: none;
-    background: transparent;
-    color: rgb(var(--color-text-base));
-    font-size: 0.75rem;
-    letter-spacing: 0.08em;
-    padding: 0.4rem 0.65rem;
-    border-radius: 999px;
-    cursor: pointer;
-    opacity: 0.7;
-    transition: opacity 160ms ease, background-color 160ms ease;
-  }
-
-  .lang-btn:hover {
-    opacity: 1;
-  }
-
-  .lang-btn.is-active {
-    background: rgb(var(--color-text-base));
-    color: rgb(var(--color-fill));
-    opacity: 1;
-  }
-
+  .top-controls { position: absolute; right: 0; top: 4px; }
+  .lang-toggle { display: flex; gap: .8rem; }
+  .lang-btn { font-family: "Commit Mono", monospace; border: 0; background: transparent; color: var(--text-dim); font-size: .75rem; padding: .25rem 0; cursor: pointer; }
+  .lang-btn.is-active { color: var(--text); text-decoration: underline; text-underline-offset: 5px; }
   .name {
-    font-size: 2.5rem;
-    font-weight: 700;
+    padding-right: 90px;
+    font-size: 2rem;
+    font-weight: 500;
     letter-spacing: -0.02em;
     margin-bottom: 0.5rem;
   }
 
   .title {
-    font-size: 1.125rem;
+    font-size: 1rem;
     opacity: 85%;
     margin-bottom: 0.25rem;
   }
@@ -283,8 +275,7 @@ import Socials from "@components/Socials.astro";
 
   .section {
     margin-bottom: 4rem;
-    opacity: 0;
-    animation: fadeInUp 400ms ease-out forwards;
+    padding: 0;
   }
 
   .section:nth-child(2) { animation-delay: 0.1s; }
@@ -295,11 +286,12 @@ import Socials from "@components/Socials.astro";
   .section:nth-child(7) { animation-delay: 0.6s; }
 
   .section-title {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-family: "Commit Mono", monospace;
+    font-size: 0.625rem;
+    font-weight: 400;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    opacity: 50%;
+    color: var(--text-dim);
     margin-bottom: 1.5rem;
   }
 
@@ -320,17 +312,17 @@ import Socials from "@components/Socials.astro";
 
   .skill-category:hover {
     background-color: rgba(var(--color-border), 0.3);
-    transform: translateX(4px);
+
   }
 
   .skill-label {
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     opacity: 70%;
   }
 
   .skill-value {
-    font-size: 0.875rem;
+    font-size: 1rem;
     opacity: 80%;
   }
 
@@ -348,7 +340,7 @@ import Socials from "@components/Socials.astro";
 
   .job:hover {
     opacity: 1;
-    transform: translateY(-2px);
+
   }
 
   .job:last-child {
@@ -360,18 +352,19 @@ import Socials from "@components/Socials.astro";
   }
 
   .job-title {
-    font-size: 1.125rem;
-    font-weight: 600;
+    font-size: 1.0625rem;
+    font-weight: 500;
     margin-bottom: 0.25rem;
   }
 
   .job-meta {
-    font-size: 0.875rem;
+    font-family: "Commit Mono", monospace;
+    font-size: 0.625rem;
     opacity: 60%;
   }
 
   .job-desc {
-    font-size: 1rem;
+    font-size: 0.9375rem;
     line-height: 1.6;
     opacity: 80%;
   }
@@ -384,7 +377,7 @@ import Socials from "@components/Socials.astro";
 
   .project-name {
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
   }
 
   .project-name a {
@@ -414,6 +407,8 @@ import Socials from "@components/Socials.astro";
     opacity: 70%;
   }
 
+  .credential-meta { display: block; font-family: "Commit Mono", monospace; font-size: .625rem; color: var(--text-dim); margin-top: .3rem; }
+  .certificate { margin-bottom: .75rem; }
   .certifications {
     list-style: none;
     padding: 0;
@@ -424,7 +419,7 @@ import Socials from "@components/Socials.astro";
   }
 
   .certifications li {
-    font-size: 0.9375rem;
+    font-size: .9375rem;
     opacity: 80%;
     padding-left: 1.25rem;
     position: relative;
@@ -440,7 +435,7 @@ import Socials from "@components/Socials.astro";
     content: "→";
     position: absolute;
     left: 0;
-    opacity: 50%;
+    color: var(--text-dim);
   }
 
   .connect-text {
@@ -465,16 +460,16 @@ import Socials from "@components/Socials.astro";
     padding-top: 2rem;
     border-top: 1px solid rgb(var(--color-border));
     font-size: 0.875rem;
-    opacity: 50%;
+    color: var(--text-dim);
   }
 
   @media (max-width: 640px) {
     .container {
-      padding: 2rem 1.25rem 3rem;
+      padding: 0 1.5rem;
     }
 
     .name {
-      font-size: 2rem;
+      font-size: 1.625rem;
     }
 
     .skill-category {
@@ -505,6 +500,8 @@ import Socials from "@components/Socials.astro";
       skillsObsLabel: "Observability",
       skillsObsValue: "Grafana, Prometheus, Langfuse, PostHog, BetterStack",
       expTitle: "Experience",
+      jobBeinexTitle: "AI Specialist - Beinex",
+      jobBeinexMeta: "Jun 2026 - Present · Full-time, On-site",
       jobVautomateTitle: "Lead Product Engineer - VAutomate AI",
       jobVautomateMeta: "Mar 2024 - Present · Switzerland (Remote)",
       jobVautomateDesc:
@@ -542,9 +539,8 @@ import Socials from "@components/Socials.astro";
       cert5: "Introduction to Data Science - Coursera",
       cert6: "Salesforce Trailhead Superbadges",
       connectTitle: "Connect",
-      connectLead: "Open to interesting projects and conversations.",
-      connectCta: "Schedule a call",
-      connectTail: "or just say hi.",
+      connectLead: "Currently an AI Specialist at Beinex. Always happy to talk about AI and software.",
+      connectCta: "Say hello",
     },
     jp: {
       headline: "フルスタックエンジニア・AIスペシャリスト・QAリード",
@@ -565,6 +561,8 @@ import Socials from "@components/Socials.astro";
       skillsObsLabel: "可観測性",
       skillsObsValue: "Grafana, Prometheus, Langfuse, PostHog, BetterStack",
       expTitle: "経歴",
+      jobBeinexTitle: "AIスペシャリスト - Beinex",
+      jobBeinexMeta: "2026年6月 - 現在 · 正社員、オンサイト",
       jobVautomateTitle: "リードプロダクトエンジニア - VAutomate AI",
       jobVautomateMeta: "2024年3月 - 現在 · スイス（リモート）",
       jobVautomateDesc:
@@ -602,9 +600,8 @@ import Socials from "@components/Socials.astro";
       cert5: "Introduction to Data Science - Coursera",
       cert6: "Salesforce Trailhead Superbadges",
       connectTitle: "連絡",
-      connectLead: "案件のご相談やコラボのご連絡を歓迎しています。",
-      connectCta: "ミーティングを予約",
-      connectTail: "または気軽にメッセージしてください。",
+      connectLead: "現在、BeinexのAIスペシャリストです。AIやソフトウェアについての交流を歓迎しています。",
+      connectCta: "LinkedInで連絡",
     },
   };
 

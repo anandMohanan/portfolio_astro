@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/blog",
+      "destination": "https://www.niemand.blog/",
+      "permanent": true
+    },
+    {
+      "source": "/journal",
+      "destination": "https://www.niemand.blog/",
+      "permanent": true
+    }
+  ],
+  "trailingSlash": true
+}

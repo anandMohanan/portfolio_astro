@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "Tools"
+description: "The development tools Anand Mohanan uses for software engineering, from Arch Linux and Neovim to his everyday programming setup."
 ---
 
 ## Operating System

@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/AboutLayout.astro
 title: "About"
+description: "About Anand Mohanan, a full-stack engineer and AI specialist building software, AI agents, and computer vision systems."
 ---
 
 I strive to stay current and meet the needs of users by keeping up with the constantly

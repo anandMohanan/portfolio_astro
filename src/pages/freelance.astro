@@ -3,8 +3,8 @@ import Layout from "@layouts/Layout.astro";
 import Socials from "@components/Socials.astro";
 ---
 
-<Layout>
-  <main class="container">
+<Layout title="Freelance AI & Full-Stack Developer | Anand Mohanan" description="Work with Anand Mohanan on AI agents, full-stack applications, computer vision, and cloud infrastructure. Explore services and get in touch." >
+  <main id="main-content" class="container">
     <header class="header">
       <h1 class="name">Freelance AI & Full-Stack Developer</h1>
       <p class="tagline">I build AI-powered products and help companies scale their technical infrastructure.</p>
@@ -97,13 +97,10 @@ import Socials from "@components/Socials.astro";
       </p>
       <div class="contact-actions">
         <a href="mailto:ananthkvmohanan@gmail.com" class="contact-btn">Email Me</a>
-        <a href="https://cal.com/anand-mohanan/15min" class="contact-btn secondary">Schedule a Call</a>
       </div>
     </section>
 
-    <footer class="footer">
-      <p>© {new Date().getFullYear()} Anand Mohanan</p>
-    </footer>
+
   </main>
 </Layout>
 
@@ -111,7 +108,8 @@ import Socials from "@components/Socials.astro";
   .container {
     max-width: 680px;
     margin: 0 auto;
-    padding: 4rem 1.5rem;
+    width: 100%;
+    padding: 0 1.5rem;
   }
 
   .header {
@@ -304,7 +302,7 @@ import Socials from "@components/Socials.astro";
 
   @media (max-width: 640px) {
     .container {
-      padding: 2.5rem 1.25rem;
+      padding: 0 1.5rem;
     }
 
     .pricing {
