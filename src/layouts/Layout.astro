@@ -1,5 +1,6 @@
 ---
 import { SITE } from "src/config";
+import themeScript from "../scripts/theme.js?raw";
 import "../styles/base.css";
 import "../styles/site.css";
 import SiteHeader from "../components/SiteHeader.astro";
@@ -79,7 +80,7 @@ const fallbackImageURL = new URL(SITE.ogImage, SITE.website).href;
       sameAs: ['https://github.com/anandMohanan', 'https://www.linkedin.com/in/anand-mohanan/'],
       subjectOf: { '@type': 'Blog', url: 'https://www.niemand.blog/', name: 'Niemand Journal' }
     }).replace(/</g, "\u003c")} />
-    <script is:inline src="/toggle-theme.js"></script>
+    <script is:inline data-cfasync="false" set:html={themeScript}></script>
   </head>
   <body>
     <SiteHeader area="portfolio" />

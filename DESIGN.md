@@ -7,7 +7,7 @@ These repositories deploy independently. Keep these files identical in both proj
 - src/styles/site.css
 - src/components/SiteHeader.astro
 - src/components/SiteFooter.astro
-- public/toggle-theme.js
+- Theme behavior: src/scripts/theme.js here, public/toggle-theme.js in the journal. The portfolio embeds its script in the page to avoid stale external script caches and initializes after the DOM is ready, including when the script loads late.
 
 Canonical origins are https://anandmohanan.com/ and https://www.niemand.blog/. Pages use trailing slashes. Keep titles, RSS, sitemaps, social images and canonical links on the appropriate origin. The blog retains its human/agent authorship distinction.
 
