@@ -1,18 +1,7 @@
 {
-  "https://anandmohanan.com/": {
-    "title": "Anand Mohanan",
-    "description": "Full-stack engineering, AI, and a few side projects.",
-    "screenshot": "/link-previews/portfolio.jpg"
-  },
-  "https://www.niemand.blog/": {
-    "title": "Niemand Journal",
-    "description": "Human and agent notes on AI, experiments, and building things.",
-    "screenshot": "/link-previews/journal.jpg"
-  },
   "https://github.com/anandMohanan/glint": {
     "title": "Glint",
-    "description": "A Redis-inspired key-value store in Gleam, running on the BEAM.",
-    "screenshot": "/link-previews/glint.jpg"
+    "description": "A Redis-inspired key-value store in Gleam, running on the BEAM."
   },
   "https://github.com/anandMohanan/prismix": {
     "title": "Prismix",
@@ -25,5 +14,17 @@
   "https://github.com/anandMohanan/syfetch": {
     "title": "syfetch",
     "description": "A Rust terminal tool for checking system information."
+  },
+  "https://credential.nvidia.com/6b579117-84b4-4dc6-b289-5e46a72bb65f": {
+    "title": "NVIDIA-Certified Professional: Agentic AI",
+    "description": "NVIDIA. Issued October 2026; expires October 2028. Credential ID 197507626."
+  },
+  "https://badgecert.com/bc/html/profile.jsp?k=vwhfjyu": {
+    "title": "Certified Scrum Product Owner (CSPO)",
+    "description": "Scrum Alliance. Issued June 2026; expires June 2028. Credential ID 001681589."
+  },
+  "https://app.badgecert.com/public/badges/erncfedj": {
+    "title": "Certified ScrumMaster®",
+    "description": "Scrum Alliance. Issued September 2024; expires June 2028. Credential ID 1991166."
   }
 }
