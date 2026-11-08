@@ -1,0 +1,84 @@
+{
+  "https://anandmohanan.com/": {
+    "title": "Anand Mohanan",
+    "description": "Full-stack engineering, AI, and a few side projects.",
+    "image": "/link-previews/cf1eb08b1b1ad4e8.png",
+    "screenshot": "/link-previews/portfolio.jpg"
+  },
+  "https://anandmohanan.com/about": {
+    "title": "About | Anand Mohanan",
+    "description": "About Anand Mohanan, a full-stack engineer and AI specialist building software, AI agents, and computer vision systems.",
+    "image": "/link-previews/0f96ba78afb4c364.png"
+  },
+  "https://anandmohanan.com/tools": {
+    "title": "Tools | Anand Mohanan",
+    "description": "The development tools Anand Mohanan uses for software engineering, from Arch Linux and Neovim to his everyday programming setup.",
+    "image": "/link-previews/06bb95959d36cbfd.png"
+  },
+  "https://app.badgecert.com/public/badges/erncfedj": {
+    "title": "Certified ScrumMaster\u00ae",
+    "description": ""
+  },
+  "https://badgecert.com/bc/html/profile.jsp?k=vwhfjyu": {
+    "title": "I recently earned a new certificate from Scrum Alliance (https://www.scrumalliance.org/). Review my recent achievement:",
+    "description": "BadgeCert Badge Issuance",
+    "image": "/link-previews/b39d5d856fad544d.png"
+  },
+  "https://credential.nvidia.com/6b579117-84b4-4dc6-b289-5e46a72bb65f": {
+    "title": "Accredible \u2022 Certificates, Badges and Blockchain",
+    "description": "Home of digital credentials",
+    "image": "/link-previews/46d085a2a77b1f79.png"
+  },
+  "https://esotericnetwork.site/": {
+    "title": "Home Page",
+    "description": ""
+  },
+  "https://ethereal-archive.vercel.app/": {
+    "title": "Home Page",
+    "description": ""
+  },
+  "https://github.com/anandMohanan": {
+    "title": "anandMohanan - Overview",
+    "description": "Not freelancing anymore. anandMohanan has 109 repositories available. Follow their code on GitHub.",
+    "image": "/link-previews/fb4ad6863b04d5e8.jpg"
+  },
+  "https://github.com/anandMohanan?tab=repositories": {
+    "title": "anandMohanan - Repositories",
+    "description": "Not freelancing anymore. anandMohanan has 109 repositories available. Follow their code on GitHub.",
+    "image": "/link-previews/ca74a6725a85ecf4.jpg"
+  },
+  "https://github.com/anandMohanan/glint": {
+    "title": "Glint",
+    "description": "A Redis-inspired key-value store in Gleam, running on the BEAM.",
+    "screenshot": "/link-previews/glint.jpg"
+  },
+  "https://github.com/anandMohanan/interpreter_in_rust": {
+    "title": "interpreter_in_rust",
+    "description": "An interpreter experiment in Rust, with a lexer, parser, and REPL.",
+    "image": "/link-previews/6e3db876aa295f81.png"
+  },
+  "https://github.com/anandMohanan/prismix": {
+    "title": "Prismix",
+    "description": "A Gleam reverse proxy with load balancing, health checks, and retries.",
+    "image": "/link-previews/c878c95080c311f3.png"
+  },
+  "https://github.com/anandMohanan/syfetch": {
+    "title": "syfetch",
+    "description": "A Rust terminal tool for checking system information.",
+    "image": "/link-previews/52060c6d558220dd.png"
+  },
+  "https://resume-sync1.vercel.app/": {
+    "title": "Resume Sync",
+    "description": "Organize resumes with version control, track applications, and join a supportive community for career insights."
+  },
+  "https://www.linkedin.com/in/anand-mohanan": {
+    "title": "Say hello",
+    "description": ""
+  },
+  "https://www.niemand.blog/": {
+    "title": "Niemand Journal",
+    "description": "Human and agent notes on AI, experiments, and building things.",
+    "image": "/link-previews/72dac68ceecf274e.png",
+    "screenshot": "/link-previews/journal.jpg"
+  }
+}

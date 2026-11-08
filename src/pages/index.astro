@@ -163,25 +163,26 @@ import Socials from "@components/Socials.astro";
     </section>
 
     <section class="section">
-      <h2 class="section-title" data-i18n="projectsTitle">Projects</h2>
+      <h2 class="section-title" data-i18n="projectsTitle">Things I've built</h2>
       <div class="projects">
-        <div class="project">
-          <h3 class="project-name"><a href="https://brainbase.space" target="_blank" rel="noopener">Brainbase</a></h3>
-          <p class="project-desc" data-i18n="projectBrainbase">Private unified workspace for notes, tasks, and ideas</p>
-        </div>
-        <div class="project">
-          <h3 class="project-name"><a href="https://staybase.tech" target="_blank" rel="noopener">Staybase</a></h3>
-          <p class="project-desc" data-i18n="projectStaybase">AI-powered customer retention platform for e-commerce</p>
-        </div>
-        <div class="project">
-          <h3 class="project-name"><a href="https://vautomate.ai" target="_blank" rel="noopener">VAutomate</a></h3>
-          <p class="project-desc" data-i18n="projectVautomate">Intelligent API agents platform</p>
-        </div>
-        <div class="project">
-          <h3 class="project-name"><a href="https://esotericnetwork.site" target="_blank" rel="noopener">Esoteric Network</a></h3>
-          <p class="project-desc" data-i18n="projectEsoteric">Social platform for spiritual writings and art</p>
-        </div>
+        <article class="project">
+          <div class="project-heading"><h3 class="project-name"><a href="https://github.com/anandMohanan/glint">Glint</a></h3><span class="project-language">Gleam</span></div>
+          <p class="project-desc" data-i18n="projectGlint">A Redis-inspired key-value store running on the BEAM.</p>
+        </article>
+        <article class="project">
+          <div class="project-heading"><h3 class="project-name"><a href="https://github.com/anandMohanan/prismix">Prismix</a></h3><span class="project-language">Gleam</span></div>
+          <p class="project-desc" data-i18n="projectPrismix">A reverse proxy with load balancing, health checks, and retries.</p>
+        </article>
+        <article class="project">
+          <div class="project-heading"><h3 class="project-name"><a href="https://github.com/anandMohanan/interpreter_in_rust">interpreter_in_rust</a></h3><span class="project-language">Rust</span></div>
+          <p class="project-desc" data-i18n="projectInterpreter">An interpreter experiment with a lexer, parser, and a small REPL.</p>
+        </article>
+        <article class="project">
+          <div class="project-heading"><h3 class="project-name"><a href="https://github.com/anandMohanan/syfetch">syfetch</a></h3><span class="project-language">Rust</span></div>
+          <p class="project-desc" data-i18n="projectSyfetch">A terminal tool for checking system information.</p>
+        </article>
       </div>
+      <p class="github-more"><a href="https://github.com/anandMohanan?tab=repositories" data-i18n="moreProjects">More on GitHub →</a></p>
     </section>
 
     <section class="section">
@@ -373,10 +374,13 @@ import Socials from "@components/Socials.astro";
     opacity: 80%;
   }
 
+  .github-more { margin-top: 1.5rem; font-size: .75rem; color: var(--text-dim); }
+  .project-heading { display: flex; flex-wrap: wrap; align-items: baseline; gap: .75rem; }
+  .project-language { font-size: .625rem; color: var(--text-dim); }
   .projects {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .project-name {
@@ -530,11 +534,12 @@ import Socials from "@components/Socials.astro";
       jobAvasoftMeta: "Feb 2023 - Feb 2024 · Chennai",
       jobAvasoftDesc:
         "Performed root cause analysis for production incidents, reducing resolution time. Wrote and executed data scripts to fix production data inconsistencies. Delivered client-requested enhancements with a focus on stability and performance.",
-      projectsTitle: "Projects",
-      projectBrainbase: "Private unified workspace for notes, tasks, and ideas",
-      projectStaybase: "AI-powered customer retention platform for e-commerce",
-      projectVautomate: "Intelligent API agents platform",
-      projectEsoteric: "Social platform for spiritual writings and art",
+      moreProjects: "More on GitHub →",
+      projectsTitle: "Things I've built",
+      projectGlint: "A Redis-inspired key-value store running on the BEAM.",
+      projectPrismix: "A reverse proxy with load balancing, health checks, and retries.",
+      projectInterpreter: "An interpreter experiment with a lexer, parser, and a small REPL.",
+      projectSyfetch: "A terminal tool for checking system information.",
       certTitle: "Certifications",
       cert1: "Certified ScrumMaster®",
       cert2: "Generative AI Fundamentals - Databricks",
@@ -591,11 +596,12 @@ import Socials from "@components/Socials.astro";
       jobAvasoftMeta: "2023年2月 - 2024年2月 · チェンナイ",
       jobAvasoftDesc:
         "本番障害の根本原因分析を実施し、復旧時間を短縮。データ不整合修正のためのデータスクリプトを作成・実行。安定性と性能を重視したクライアント要望対応を継続的に実施。",
-      projectsTitle: "プロジェクト",
-      projectBrainbase: "メモ・タスク・アイデアを統合するプライベートワークスペース",
-      projectStaybase: "EC向けAI顧客リテンションプラットフォーム",
-      projectVautomate: "インテリジェントAPIエージェントプラットフォーム",
-      projectEsoteric: "スピリチュアル文章とアートのソーシャルプラットフォーム",
+      moreProjects: "GitHubでもっと見る →",
+      projectsTitle: "趣味で作ったもの",
+      projectGlint: "BEAM上で動く、Redisに着想を得たキーバリューストア。",
+      projectPrismix: "負荷分散、ヘルスチェック、リトライを備えたリバースプロキシ。",
+      projectInterpreter: "字句解析、構文解析、小さなREPLから作るインタプリタの実験。",
+      projectSyfetch: "ターミナルでシステム情報を確認するツール。",
       certTitle: "資格",
       cert1: "Certified ScrumMaster®",
       cert2: "Generative AI Fundamentals - Databricks",

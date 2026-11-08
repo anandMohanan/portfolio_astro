@@ -11,7 +11,9 @@
     "format:check": "prettier --check .",
     "format": "prettier --write .",
     "cz": "cz",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "previews:refresh": "node scripts/refresh-link-previews.mjs",
+    "test:previews": "node --test tests/link-previews.test.mjs"
   },
   "dependencies": {
     "@astrojs/rss": "^1.2.1",
